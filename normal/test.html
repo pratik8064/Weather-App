@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title>Weather information</title>
+    <meta charset="utf-8" />
+    
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div>
+        <p id="error">
+        </p>
+    </div>
+    <div>
+        <table id="table">
+            <tr>
+                <th>
+                    City Name
+                </th>
+                <th>
+                    Timestamp<br>
+                    (yyyy:mm:dd:hh:mm:ss)
+                </th>
+                <th>
+                    Temperature
+                    <br>in C
+                </th>
+                <th>
+                    Humidity
+                    <br>in %
+                </th>
+                <th>
+                    Wind speed
+                    <br>in miles per hour
+                </th>
+                <th>
+                    Cloudiness
+                    <br>in %
+                </th>
+            </tr>
+            <tr id="row1New">
+            </tr>
+            <tr id="row1Old">
+            </tr>
+            <tr id="row2New">
+            </tr>
+            <tr id="row2Old">
+            </tr>
+            <tr id="row3New">
+            </tr>
+            <tr id="row3Old">
+            </tr>
+            
+        </table>
+    </div>
+    <div>
+        <p>
+            Please select city :
+            <select name="city3" onchange="addCity(true)">
+                <option value="New York">New York</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Sydney">Sydney</option>
+                <option value="New Delhi">New Delhi</option>
+                <option value="Shanghai">Shanghai</option>
+            </select>
+        </p>
+        <input id="refresh" type="button" value="Referesh" onClick="refreshData()"/>
+    </div>
+    <div>
+        
+        <p id="avgTemp"></p>
+        <p id="avgHum"></p>
+        <p id="nicest"></p>
+        <p id="worst"></p>
+        
+    </div>
+
+
+</body>
+<script src="./normal.js"></script>
+</html>
